@@ -14,7 +14,7 @@ variables:
   webAppName: 'chaotest'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'test'
 
   # Environment name
   environmentName: 'chaotest'

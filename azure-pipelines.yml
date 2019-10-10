@@ -30,7 +30,7 @@ stages:
   jobs:
   - job: BuildJob
     pool:
-      vmImage: $(vmImageName)
+      name: 'test'
     steps:
     - script: |
         sudo update-alternatives --set php /usr/bin/php$(phpVersion)

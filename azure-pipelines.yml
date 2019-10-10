@@ -22,10 +22,3 @@ steps:
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
 
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'OSCE_POC(5efaa1c0-1e50-40fe-a755-979c9047f356)'
-    appType: 'webAppLinux'
-    WebAppName: 'chaotest'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'

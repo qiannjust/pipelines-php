@@ -14,7 +14,7 @@ variables:
   webAppName: 'chaotest'
 
   # Agent VM image name
-  name: 'test'
+  vmImageName: 'ubuntu-latest'
 
   # Environment name
   environmentName: 'chaotest'
@@ -30,7 +30,7 @@ stages:
   jobs:
   - job: BuildJob
     pool:
-      name: 'test'
+      vmImage: $(vmImageName)
     steps:
     - script: |
         sudo update-alternatives --set php /usr/bin/php$(phpVersion)
